@@ -1,5 +1,6 @@
 require './item'
 class Label
+  attr_accessor :title, :color
   attr_reader :items
 
   def initialize(title, color)
