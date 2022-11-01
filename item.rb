@@ -24,14 +24,15 @@ class Item
     @label = label
   end
 
-private
+  private
 
   def can_be_archived?
     Date.today.year - @publish_date.to_i > 10
   end
 
- public
- def move_to_archive?
+  public
+
+  def move_to_archive?
     @archived = true if can_be_archived?
- end
-puts
+  end
+end
