@@ -1,0 +1,3 @@
+class App
+  @books = []
+end
