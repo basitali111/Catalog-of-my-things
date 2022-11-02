@@ -67,4 +67,15 @@ class MusicAlbumsModule
     file.write(JSON[@genres])
     file.close
   end
+
+  # list albums
+  def list_music_albums
+    if @music_albums.empty?
+      puts 'Sorry, the music_albums list is currently empty'
+    else
+      @music_albums.each_with_index do |music_album, i|
+        puts "#{i + 1}. Genre: \"#{music_album['genre']}\", Author: #{music_album['author']}"
+      end
+    end
+  end
 end
