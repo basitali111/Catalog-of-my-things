@@ -18,7 +18,7 @@ class MusicAlbum < Item
       'id' => @id,
       'genre' => @genre,
       'author' => @author,
-      'publication_date' => @publication_date,
+      'publication_date' => @publish_date,
       'on_sportify' => @on_sportify
     }
   end
