@@ -25,7 +25,7 @@ class Start
     when 3
       @app.games.list_games
     when 4
-      @app.genres.list_genres
+      @app.music_albums.list_genres
     when 5
       @app.labels.list_labels
     else

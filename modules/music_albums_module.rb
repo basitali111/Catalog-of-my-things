@@ -78,4 +78,15 @@ class MusicAlbumsModule
       end
     end
   end
+
+  # list genres
+  def list_genres
+    if @genres.empty?
+      puts 'Sorry, the genres list is currently empty'
+    else
+      @genres.each_with_index do |genre, i|
+        puts "#{i + 1}. Name: \"#{genre['name']}\""
+      end
+    end
+  end
 end
