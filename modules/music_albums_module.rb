@@ -1,8 +1,9 @@
 require './music_album'
+require './genre'
 require 'json'
 
 class MusicAlbumsModule
-  attr_reader :music_albums
+  attr_reader :music_albums, :genres
 
   def initialize
     # music_albums file
@@ -10,6 +11,12 @@ class MusicAlbumsModule
     albums_file = File.open(@albums_file_location)
     @music_albums = albums_file.size.zero? ? [] : JSON.parse(albums_file.read)
     albums_file.close
+
+    # genres file
+    @genres_file_location = 'storage/genres.json'
+    genres_file = File.open(@genres_file_location)
+    @genres = genres_file.size.zero? ? [] : JSON.parse(genres_file.read)
+    genres_file.close
   end
 
   # add music album
@@ -37,6 +44,9 @@ class MusicAlbumsModule
     album.add_author(author)
     # store album
     store_album(album)
+
+    # store genre
+    store_genre(Genre.new(genre))
     puts 'Music album created successfully'
   end
 
@@ -46,6 +56,15 @@ class MusicAlbumsModule
 
     file = File.open(@albums_file_location, 'w')
     file.write(JSON[@music_albums])
+    file.close
+  end
+
+  def store_genre(created_genre)
+    created_genre = created_genre.to_json
+    @genres << created_genre
+
+    file = File.open(@genres_file_location, 'w')
+    file.write(JSON[@genres])
     file.close
   end
 end

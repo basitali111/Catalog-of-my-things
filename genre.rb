@@ -12,4 +12,11 @@ class Genre
     @items << music_album
     music_album.genre = self
   end
+
+  def to_json(*_args)
+    {
+      'id' => @id,
+      'name' => @name
+    }
+  end
 end
