@@ -1,3 +1,9 @@
+require './modules/music_albums_module'
+
 class App
-  @books = []
+  attr_accessor :music_albums
+
+  def initialize
+    @music_albums = MusicAlbumsModule.new
+  end
 end
