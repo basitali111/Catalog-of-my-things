@@ -1,3 +1,8 @@
+require './modules/books_module'
 class App
-  @books = []
+  attr_accessor :books
+
+  def initialize
+    @books = BooksModule.new
+  end
 end
