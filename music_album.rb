@@ -12,8 +12,14 @@ class MusicAlbum < Item
     super && @on_sportify
   end
 
-  def add_genre(genre)
-    @genre = genre
-    genre.items.push(self) unless genre.items.include?(self)
+  def to_json(*_args)
+    {
+      JSON.create_id => self.class.name,
+      'id' => @id,
+      'genre' => @genre,
+      'author' => @author,
+      'publication_date' => @publish_date,
+      'on_sportify' => @on_sportify
+    }
   end
 end
