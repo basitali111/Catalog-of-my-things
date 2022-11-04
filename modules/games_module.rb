@@ -42,7 +42,7 @@ class GamesModule
     store_game(game)
 
     # store author
-    store_author(Author.new(author_first_name, author_first_name))
+    store_author(Author.new(author_first_name, author_last_name))
 
     puts 'Game created successfully'
   end
