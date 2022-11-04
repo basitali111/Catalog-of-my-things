@@ -84,4 +84,15 @@ class GamesModule
       end
     end
   end
+
+  # list authors
+  def list_authors
+    if @authors.empty?
+      puts 'Sorry, the authors list is currently empty'
+    else
+      @authors.each_with_index do |author, i|
+        puts "#{i + 1}. Name: #{author['first_name']} #{author['last_name']}"
+      end
+    end
+  end
 end
