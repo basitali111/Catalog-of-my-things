@@ -25,7 +25,7 @@ class BooksModule
     publish_date = gets.chomp
     book = Book.new(publisher, cover_state, publish_date)
 
-    label = add_label
+    add_label
     # store book and label
     book = book.to_json
     @books.push(book)
@@ -60,7 +60,8 @@ class BooksModule
       puts 'Sorry, the books list is currently empty'
     else
       @books.each do |book|
-        puts "Publisher: \"#{book['publisher']}\", Cover-State:\"#{book['cover_state']}\",Publish-Date:#{book['publish_date']}"
+        puts "Publisher: \"#{book['publisher']}\", Cover-State:\"#{book['cover_state']}\",
+        Publish-Date:#{book['publish_date']}"
       end
     end
   end
