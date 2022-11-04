@@ -36,9 +36,7 @@ class GamesModule
     print 'Publication date: '
     publish_date = gets.chomp
 
-    multiplayer_status(multiplayer)
-
-    game = Game.new(multiplayer, last_played_at, publish_date)
+    game = Game.new(multiplayer_status(multiplayer), last_played_at, publish_date)
     game.add_author("#{author_first_name} #{author_last_name}")
     # store game
     store_game(game)
