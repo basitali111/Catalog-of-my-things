@@ -60,8 +60,7 @@ class BooksModule
       puts 'Sorry, the books list is currently empty'
     else
       @books.each do |book|
-        puts "Publisher: \"#{book['publisher']}\", Cover-State:\"#{book['cover_state']}\",
-        Publish-Date:#{book['publish_date']}"
+        puts "Publisher:\"#{book['publisher']}\", Cover-State:\"#{book['cover_state']}\", Date:#{book['publish_date']}"
       end
     end
   end
