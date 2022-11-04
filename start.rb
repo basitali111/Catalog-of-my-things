@@ -19,7 +19,7 @@ class Start
   def list_items(selection)
     case selection
     when 1
-      @app.book.list_books
+      @app.books.list_all_books
     when 2
       @app.music_albums.list_music_albums
     when 3
@@ -27,7 +27,7 @@ class Start
     when 4
       @app.music_albums.list_genres
     when 5
-      @app.labels.list_labels
+      @app.books.list_all_labels
     else
       @app.authors.list_authors
     end
@@ -37,7 +37,7 @@ class Start
   def add_item(selection)
     case selection
     when 7
-      @app.book.add_book
+      @app.books.create_book
     when 8
       @app.music_albums.add_music_album
     else
