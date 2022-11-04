@@ -21,3 +21,18 @@ CREATE TABLE genres (
   id INT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR(100)
 );
+
+CREATE TABLE games (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  FOREIGN KEY(author_id) REFERENCES author(id)
+  publish_date DATE,
+  last_played_at DATE,
+  archived BOOLEAN,
+  multiplayer BOOLEAN,
+);
+
+CREATE TABLE authors (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  first_name VARCHAR(100)
+  last_name VARCHAR(100)
+);

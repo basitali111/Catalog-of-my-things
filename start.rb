@@ -29,7 +29,7 @@ class Start
     when 5
       @app.books.list_all_labels
     else
-      @app.authors.list_authors
+      @app.games.list_authors
     end
   end
 
