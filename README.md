@@ -24,6 +24,10 @@ To get a local copy up and running follow these simple example steps.
 2. Run `rspec spec` to test all the test files at once
 3. Run `rspec spec/name_of_test_file.rb` to test a particular file
 
+## Brief overview
+
+[Google Drive Link](https://drive.google.com/file/d/1Hq9qMQqJvaoQq7XeNukZkrBAut98VVlz/view?usp=share_link)
+
 ## Authors
 
 👤 **Basit Ali**
