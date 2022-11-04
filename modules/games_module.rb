@@ -73,4 +73,15 @@ class GamesModule
       false
     end
   end
+
+  # list games
+  def list_games
+    if @games.empty?
+      puts 'Sorry, the games list is currently empty'
+    else
+      @games.each_with_index do |game, i|
+        puts "#{i + 1}. Multiplayer: \"#{game['multiplayer']}\", Author: #{game['author']}"
+      end
+    end
+  end
 end
