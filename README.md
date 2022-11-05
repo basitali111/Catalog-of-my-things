@@ -26,7 +26,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Brief overview
 
-[Google Drive Link](https://drive.google.com/file/d/1Hq9qMQqJvaoQq7XeNukZkrBAut98VVlz/view?usp=share_link)
+[Google Drive Link](https://drive.google.com/file/d/1gE7q8keN27T1bqEtkoKV29QPnJ3ZlZ0F/view?usp=sharing)
 
 ## Authors
 
